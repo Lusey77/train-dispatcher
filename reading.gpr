@@ -1,0 +1,87 @@
+project Reading is
+
+   for Object_Dir use "build";
+   type Target_Type is
+      ("Windows", "MaRTE", "Linux");
+   Target : Target_Type := external ("Target", "Linux");
+
+   case Target is
+
+      when "Windows" =>
+         for Source_Dirs use (".", "Adc", "Command", "Dac", "Dallee", "Dispatcher", "Doubletalk", "Engineers", "HandController", "Layout", "Port_IO", "Trains", "Turnouts", "Locomotives", "Sound", "Blocks", "Sensors", "Display", "Cabs", "Map");
+         for Source_Files use ("adc.adb", "adc.ads", "blocks.adb", "blocks.ads", "bounded_queue.adb", "bounded_queue.ads", "button_pressed.adb", "cabs.adb", "cabs.ads", "cabs_test.adb", "calculate_track.adb", "callback_package.adb", 
+            "callback_package.ads", "commands.adb", "commands.ads", "common_units.ads", "dac.adb", "dac.ads", "dallee.adb", "dallee.ads", "dallee_test.adb", "dijkstra_search.adb", "dispatcher.adb", "dispatcher_mod.adb", "display.adb", 
+            "display.ads", "display_test.adb", "doubletalk.adb", "doubletalk.ads", "doubletalk_test.adb", "engineers-operations.adb", "engineers-operations.adb", "engineers-operations.ads", "engineers.ads", "fifo_queue.adb", "fifo_queue.ads", 
+            "halls.adb", "halls.ads", "hand_controller.adb", "hand_controller.ads", "hand_controller_test.adb", "layout-search.adb", "layout-search.ads", "layout.adb", "layout.ads", "locomotives.ads", "map.adb", "map.ads", "motors.adb", 
+            "motors.ads", "motors_test.adb", "port_io.adb", "port_io.ads", "sound.adb", "sound.ads", "test_blocks.adb", "test_cabs.adb", "test_command.adb", "test_dac.adb", "test_engineers.adb", "test_halls.adb", "test_layout.adb", 
+            "test_motors.adb", "test_search.adb", "test_search.adb", "test_sound.adb", "test_turnouts.adb", "trains-operations.adb", "trains-operations.ads", "trains.ads", "turnouts.adb", "turnouts.ads");
+         for Main use ("cabs_test.adb", "dallee_test.adb", "dispatcher.adb", "dispatcher_mod.adb", "dispatcher_r.adb", "display_test.adb", "doubletalk_test.adb", "hand_controller_test.adb", "motors_test.adb", "test_blocks.adb", 
+            "test_blocks.adb", "test_cabs.adb", "test_command.adb", "test_dac.adb", "test_engineers.adb", "test_halls.adb", "test_layout.adb", "test_motors.adb", "test_search.adb", "test_sound.adb", "test_turnouts.adb", 
+            "test_turnouts.adb");
+
+      when "MaRTE" =>
+         for Source_Dirs use (".", "Adc", "Command", "Dac", "Dallee", "Dispatcher", "Doubletalk", "Engineers", "HandController", "Layout", "Port_IO", "Trains", "Turnouts", "Locomotives", "Sound", "Blocks", "Sensors", "Display", "Cabs", "Map");
+         for Source_Files use ("adc.adb", "adc.ads", "blocks.adb", "blocks.ads", "bounded_queue.adb", "bounded_queue.ads", "button_pressed.adb", "cabs.adb", "cabs.ads", "cabs_test.adb", "calculate_track.adb", "callback_package.adb", 
+            "callback_package.ads", "commands.adb", "commands.ads", "common_units.ads", "dac.adb", "dac.ads", "dallee.adb", "dallee.ads", "dallee_test.adb", "dijkstra_search.adb", "dispatcher.adb", "dispatcher_mod.adb", "display.adb", 
+            "display.ads", "display_test.adb", "doubletalk.adb", "doubletalk.ads", "doubletalk_test.adb", "engineers-operations.adb", "engineers-operations.adb", "engineers-operations.ads", "engineers.ads", "fifo_queue.adb", "fifo_queue.ads", 
+            "halls.adb", "halls.ads", "hand_controller.adb", "hand_controller.ads", "hand_controller_test.adb", "layout-search.adb", "layout-search.ads", "layout.adb", "layout.ads", "locomotives.ads", "map.adb", "map.ads", "motors.adb", 
+            "motors.ads", "motors_test.adb", "port_io.adb", "port_io.ads", "sound.adb", "sound.ads", "test_blocks.adb", "test_cabs.adb", "test_command.adb", "test_dac.adb", "test_engineers.adb", "test_halls.adb", "test_layout.adb", 
+            "test_motors.adb", "test_search.adb", "test_search.adb", "test_sound.adb", "test_turnouts.adb", "trains-operations.adb", "trains-operations.ads", "trains.ads", "turnouts.adb", "turnouts.ads");
+         for Main use ("cabs_test.adb", "dallee_test.adb", "dispatcher.adb", "dispatcher_mod.adb", "dispatcher_r.adb", "display_test.adb", "doubletalk_test.adb", "hand_controller_test.adb", "motors_test.adb", "test_blocks.adb", 
+            "test_blocks.adb", "test_cabs.adb", "test_command.adb", "test_dac.adb", "test_engineers.adb", "test_halls.adb", "test_layout.adb", "test_motors.adb", "test_search.adb", "test_sound.adb", "test_turnouts.adb", 
+            "test_turnouts.adb");
+
+      when "Linux" =>
+         for Source_Dirs use (".", "Adc", "Command", "Dac", "Dallee", "Dispatcher", "Doubletalk", "Engineers", "HandController", "Layout", "Port_IO", "Trains", "Turnouts", "Locomotives", "Sound", "Blocks", "Sensors", "Display", "Cabs", "Map");
+         for Source_Files use ("adc.adb", "adc.ads", "blocks.adb", "blocks.ads", "bounded_queue.adb", "bounded_queue.ads", "button_pressed.adb", "cabs.adb", "cabs.ads", "cabs_test.adb", "calculate_track.adb", "callback_package.adb", 
+            "callback_package.ads", "commands.adb", "commands.ads", "common_units.ads", "dac.adb", "dac.ads", "dallee.adb", "dallee.ads", "dallee_test.adb", "dijkstra_search.adb", "dispatcher.adb", "dispatcher_mod.adb", "display.adb", 
+            "display.ads", "display_test.adb", "doubletalk.adb", "doubletalk.ads", "doubletalk_test.adb", "engineers-operations.adb", "engineers-operations.adb", "engineers-operations.ads", "engineers.ads", "fifo_queue.adb", "fifo_queue.ads", 
+            "halls.adb", "halls.ads", "hand_controller.adb", "hand_controller.ads", "hand_controller_test.adb", "layout-search.adb", "layout-search.ads", "layout.adb", "layout.ads", "locomotives.ads", "map.adb", "map.ads", "motors.adb", 
+            "motors.ads", "motors_test.adb", "port_io.adb", "port_io.ads", "sound.adb", "sound.ads", "test_blocks.adb", "test_cabs.adb", "test_command.adb", "test_dac.adb", "test_engineers.adb", "test_halls.adb", "test_layout.adb", 
+            "test_motors.adb", "test_search.adb", "test_search.adb", "test_sound.adb", "test_turnouts.adb", "trains-operations.adb", "trains-operations.ads", "trains.ads", "turnouts.adb", "turnouts.ads");
+         for Main use ("cabs_test.adb", "dallee_test.adb", "dispatcher.adb", "dispatcher_mod.adb", "dispatcher_r.adb", "display_test.adb", "doubletalk_test.adb", "hand_controller_test.adb", "motors_test.adb", "test_blocks.adb", 
+            "test_blocks.adb", "test_cabs.adb", "test_command.adb", "test_dac.adb", "test_engineers.adb", "test_halls.adb", "test_layout.adb", "test_motors.adb", "test_search.adb", "test_sound.adb", "test_turnouts.adb", 
+            "test_turnouts.adb");
+   end case;
+
+   package Ide is
+      for Vcs_Kind use "Subversion";
+      for Vcs_Repository_Root use "https://student.cs.uni.edu/svn/TrainLab-Spring15-Reading";
+
+      case Target is
+
+         when "Windows" =>
+
+         when "MaRTE" =>
+            for Compiler_Command ("ada") use "mgnatmake";
+
+         when "Linux" =>
+
+      end case;
+   end Ide;
+
+   package Builder is
+
+      case Target is
+
+         when "Windows" =>
+            for Default_Switches ("ada") use ("-g", "-C");
+
+         when "MaRTE" =>
+            for Default_Switches ("ada") use ("-g", "-C", "-x", "-o", "build/mprogram");
+
+         when "Linux" =>
+            for Default_Switches ("ada") use ("-g", "-C", "--RTS=native");
+      end case;
+   end Builder;
+
+   package Compiler is
+      for Default_Switches ("ada") use ("-gnaty3aeknM80pStxlrb", "-gnatwa", "-g", "-gnat05", "-fstack-check", "-gnato");
+   end Compiler;
+
+   package Pretty_Printer is
+      for Default_Switches ("ada") use ("-M80", "-c3");
+   end Pretty_Printer;
+
+end Reading;
+
